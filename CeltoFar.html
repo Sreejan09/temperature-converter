@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Celcius to Farhenhite</title>
+    </head>
+    <body>
+        <div>
+            <label for="celTemp">Celcius</label>
+            <input type="number" id="celTemp" name="CelciusTemp" placeholder="Enter the Temperature" required>
+        </div>
+        <button onclick="convertTemperature();">
+            Convert the temperature to Farhenhite
+        </button>
+        <p id="result"></p>
+        <script>
+            function convertTemperature(){
+                let celcius = document.getElementById('celTemp').value;
+                let fahrenhite = 9/5*celcius + 32;
+
+                document.getElementById('result').innerHTML=`${celcius}°C celcius is equal to ${fahrenhite}°F Farhenhite`;
+            }
+        </script>
+    </body>
+</html>
